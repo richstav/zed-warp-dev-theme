@@ -18,13 +18,13 @@
         "elevated_surface.background": "#111111",
         "surface.background": "#0a0a0a",
         "element.background": "#111111",
-        "element.hover": "#111111",
+        "element.hover": "#161616",
         "element.active": "#00c2ff22",
         "element.selected": "#00c2ff1a",
         "element.disabled": "#0a0a0a",
         "drop_target.background": "#00c2ff22",
         "ghost_element.background": null,
-        "ghost_element.hover": "#111111",
+        "ghost_element.hover": "#161616",
         "ghost_element.active": "#00c2ff22",
         "ghost_element.selected": "#00c2ff1a",
         "ghost_element.disabled": null,
@@ -130,9 +130,9 @@
         "modified": "#fefdc2",
         "modified.background": "#000000",
         "modified.border": "#fefdc2",
-        "predictive": "#4a4a4a",
+        "predictive": "#5a5a5a",
         "predictive.background": "#000000",
-        "predictive.border": "#4a4a4a",
+        "predictive.border": "#5a5a5a",
         "renamed": "#00c2ff",
         "renamed.background": "#000000",
         "renamed.border": "#00c2ff",
@@ -259,7 +259,7 @@
             "color": "#a5d5fe"
           },
           "predictive": {
-            "color": "#4a4a4a",
+            "color": "#5a5a5a",
             "font_style": "italic"
           },
           "preproc": {
