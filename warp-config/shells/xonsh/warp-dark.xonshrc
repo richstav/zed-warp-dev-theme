@@ -1,0 +1,121 @@
+# Warp Dark Theme - Xonsh Configuration
+
+# -*- coding: utf-8 -*-
+
+from xonsh.built_ins import XonshSession
+
+# Environment
+$EDITOR = "vim"
+$VISUAL = "vim"
+$PAGER = "less"
+$LANG = "en_US.UTF-8"
+$LC_ALL = "en_US.UTF-8"
+
+# Colors - Warp Dark Theme
+$COLOR_CLS = "000000"
+$DEFAULT_COLOR = "ffffff"
+$CURSOR_COLOR = "00c2ff"
+
+# Xonsh color scheme
+$VC_FG = "#ffffff"
+$VC_BG = "#000000"
+
+# Prompt
+$PROMPT = "{YELLOW}➜{RESET} {CYAN}{cwd}{RESET} {BOLD_GREEN}❯{RESET} "
+
+# Right prompt
+$RIGHT_PROMPT = "{TIME}"
+
+# Multi-line prompt
+$PROMPT_MULTILINE = "{NO_COLOR}█{RESET} "
+
+# Aliases
+aliases["ll"] = "ls -la"
+aliases["la"] = "ls -la"
+aliases["l"] = "ls -lah"
+aliases[".."] = "cd .."
+aliases["..."] = "cd ../.."
+aliases["...."] = "cd ../../.."
+
+# Git aliases
+aliases["g"] = "git"
+aliases["gs"] = "git status"
+aliases["ga"] = "git add"
+aliases["gc"] = "git commit"
+aliases["gp"] = "git push"
+aliases["gl"] = "git pull"
+aliases["gco"] = "git checkout"
+aliases["gb"] = "git branch"
+aliases["gd"] = "git diff"
+
+# Custom functions
+def which(cmd):
+    """Find command in PATH"""
+    from shutil import which as _which
+    return _which(cmd)
+
+def mkcd(path):
+    """Create directory and cd into it"""
+    import os
+    import builtins
+    os.makedirs(path, exist_ok=True)
+    os.chdir(path)
+
+def gac(msg):
+    """Git add all and commit"""
+    import subprocess
+    subprocess.run(["git", "add", "-A"])
+    subprocess.run(["git", "commit", "-m", msg])
+
+# Events
+@events.on_precommand
+def clear_screen_on_command(cmd):
+    if cmd.strip() == "clear":
+        return
+
+@events.on_chdir
+def cd_message(newdir):
+    print(f"\n\033[36m\033[1mChanged directory to:\033[0m {newdir}\n")
+
+# Completers
+$COMPLETIONS_CONFIRM = True
+
+# History
+$HISTFILE = "~/.xonsh_history"
+$HISTSIZE = 10000
+
+# Auto-suggestions
+$AUTO_SUGGEST = True
+$AUTO_SUGGEST_THRESHOLD = 3
+
+# Vi mode
+$VI_MODE = True
+
+# Smart compound key bindings
+$UPDATE_PROMPT_ON_KEYPRESS = True
+
+# Xontribs
+xontrib load abbrevs
+xontrib load apt_complete
+xontrib load autojump
+xontrib load autovox
+xontrib load bashisms
+xontrib load bracketed_paste
+xontrib load corecommands
+xontrib load docker
+xontrib load fzf_windows
+xontrib load history
+xontrib load mpl
+xontrib load prompt_toolkit
+xontrib load ptk_complete
+xontrib load scandirs
+xontrib load term_title
+xontrib load vox
+xontrib load xog
+xontrib load z
+
+# Welcome message
+print("")
+print(" \033[36m\033[1mWarp Dark Xonsh\033[0m")
+print(" Loaded:", __import__("datetime").datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+print("")

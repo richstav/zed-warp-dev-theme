@@ -1,0 +1,104 @@
+{
+  "background": "#0a0a0a",
+  "background_appearance": "opaque",
+  "foreground": "#ffffff",
+  "cursor": "#00c2ff",
+  "selection": "#00c2ff2a",
+
+  "ansi": {
+    "black": "#616161",
+    "bright_black": "#8e8e8e",
+    "dim_black": "#3a3a3a",
+    "red": "#ff8272",
+    "bright_red": "#ffc4bd",
+    "dim_red": "#c06050",
+    "green": "#b4fa72",
+    "bright_green": "#d6fcb9",
+    "dim_green": "#87bc55",
+    "yellow": "#fefdc2",
+    "bright_yellow": "#fefdd5",
+    "dim_yellow": "#bfbe92",
+    "blue": "#a5d5fe",
+    "bright_blue": "#c1e3fe",
+    "dim_blue": "#7ca0bf",
+    "magenta": "#ff8ffd",
+    "bright_magenta": "#ffb1fe",
+    "dim_magenta": "#bf6bbe",
+    "cyan": "#d0d1fe",
+    "bright_cyan": "#e5e6fe",
+    "dim_cyan": "#9c9dbf",
+    "white": "#f1f1f1",
+    "bright_white": "#feffff",
+    "dim_white": "#b0b0b0"
+  },
+
+  "accent": {
+    "primary": "#00c2ff",
+    "secondary": "#b4fa72",
+    "tertiary": "#ff8ffd",
+    "warning": "#fefdc2",
+    "error": "#ff8272",
+    "success": "#b4fa72",
+    "info": "#00c2ff"
+  },
+
+  "ui": {
+    "border": "#1a1a1a",
+    "border_focused": "#00c2ff55",
+    "border_selected": "#00c2ff44",
+    "surface": "#111111",
+    "surface_elevated": "#111111",
+    "element_background": "#111111",
+    "element_hover": "#161616",
+    "element_active": "#00c2ff22",
+    "element_selected": "#00c2ff1a",
+    "text": "#ffffff",
+    "text_muted": "#808080",
+    "text_placeholder": "#4a4a4a",
+    "text_accent": "#00c2ff",
+    "icon": "#808080",
+    "icon_accent": "#00c2ff"
+  },
+
+  "editor": {
+    "background": "#000000",
+    "foreground": "#ffffff",
+    "gutter_background": "#000000",
+    "active_line_background": "#111111",
+    "line_number": "#3a3a3a",
+    "active_line_number": "#808080",
+    "indent_guide": "#1a1a1a",
+    "indent_guide_active": "#333333",
+    "wrap_guide": "#1a1a1a",
+    "invisible": "#1a1a1a"
+  },
+
+  "terminal": {
+    "background": "#000000",
+    "foreground": "#ffffff",
+    "bright_foreground": "#feffff",
+    "dim_foreground": "#b0b0b0"
+  },
+
+  "scrollbar": {
+    "thumb_background": "#ffffff18",
+    "thumb_hover_background": "#ffffff30",
+    "track_background": "#00000000"
+  },
+
+  "status": {
+    "created": "#b4fa72",
+    "deleted": "#ff8272",
+    "error": "#ff8272",
+    "hidden": "#4a4a4a",
+    "hint": "#00c2ff99",
+    "ignored": "#4a4a4a",
+    "info": "#00c2ff",
+    "modified": "#fefdc2",
+    "predictive": "#5a5a5a",
+    "renamed": "#00c2ff",
+    "success": "#b4fa72",
+    "unreachable": "#4a4a4a",
+    "warning": "#fefdc2"
+  }
+}

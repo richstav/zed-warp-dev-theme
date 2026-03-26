@@ -1,0 +1,25 @@
+{
+  "name": "warp-config",
+  "version": "1.0.0",
+  "description": "Warp Dark Theme - Unified cross-platform configuration",
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate-all.js",
+    "generate:vscode": "node scripts/generate-vscode.js",
+    "generate:iterm2": "node scripts/generate-iterm2.js",
+    "generate:zed": "node scripts/generate-zed.js"
+  },
+  "keywords": [
+    "theme",
+    "dark-theme",
+    "warp",
+    "terminal",
+    "zed",
+    "vscode",
+    "neovim"
+  ],
+  "author": "Rich Roll",
+  "license": "MIT",
+  "homepage": "https://github.com/richstav/warp-config",
+  "repository": "https://github.com/richstav/warp-config"
+}

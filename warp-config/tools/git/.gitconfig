@@ -1,0 +1,174 @@
+[user]
+	name = Rich Roll
+	email = rich@example.com
+
+[core]
+	editor = vim
+	autocrlf = input
+	whitespace = fix
+	excludesfile = ~/.gitignore_global
+
+[init]
+	defaultBranch = main
+
+[clone]
+	defaultProtocol = https
+
+[pull]
+	rebase = false
+
+[push]
+	default = simple
+	followTags = true
+
+[fetch]
+	prune = true
+	pruneTags = true
+
+[rebase]
+	autostash = true
+	autosquash = true
+
+[merge]
+	tool = vimdiff
+	conflictStyle = diff3
+
+[mergetool "vimdiff"]
+	cmd = nvim -d $LOCAL $MERGED $REMOTE
+
+[diff]
+	tool = vimdiff
+	algorithm = patience
+	colorMoved = default
+
+[diff "json"]
+	command = jq --argcolor "$GIT_COLOR_TRUECOLOR" -f /dev/stdin "$LOCAL"
+
+[status]
+	showStaged = true
+	short = false
+
+[branch]
+	autosetupmerge = always
+	sort = -committerdate
+
+[tag]
+	sort = -v:refname
+
+[log]
+	date = relative
+	format = %h %ad %s (%an)
+	abbrevCommit = 40
+
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+	pager = true
+
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = red
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	func = magenta bold
+
+[help]
+	autocorrect = 1
+
+[credential]
+	helper = store
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
+[includeIf "gitdir:~/work/"]
+	path = ~/work/.gitconfig
+
+[includeIf "gitdir:~/personal/"]
+	path = ~/personal/.gitconfig
+
+[pager]
+	status = true
+	branch = false
+	diff = false
+	log = false
+	show = false
+
+[alias]
+	# Status
+	st = status
+	ss = status -s
+	co = checkout
+	br = branch
+	ls = log --oneline -20
+
+	# History
+	lg = log --graph --oneline --decorate --all
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	last = log -1 HEAD --stat
+	showd = log --pretty=format:\"%h %ad%n%s%n%n%b\" --date=short
+
+	# Staging
+	aa = add --all
+	ap = add -p
+	stage = add
+	unstage = reset HEAD --
+
+	# Commit
+	cm = commit -m
+	ca = commit --amend
+	caa = commit --amend --all
+	can = commit --amend --no-edit
+	undo = reset --soft HEAD~1
+	redo = reset --hard HEAD@{1}
+
+	# Remote
+	rv = remote -v
+	ra = remote add
+	rf = remote fetch
+	rp = remote prune
+	rs = remote show
+
+	# Stash
+	ss = stash
+	sl = stash list
+	sp = stash pop
+	ssave = stash save
+	sdrop = stash drop
+
+	# Tags
+	tag = tag -a
+	ls-tags = tag -l
+
+	# Worktree
+	wt = worktree
+	wt-list = worktree list
+	wt-add = worktree add
+	wt-rm = worktree remove
+
+	# Cleanup
+	cleanup = !git remote prune origin && git stash list | wc -l | xargs -I {} git stash drop --all 2>/dev/null || true
+	sweep = !git branch -d $(git branch --merged | grep -v '\\*' | xargs -n 1 echo)
+
+	# Quick
+	ref = !git for-each-ref --sort=-committerdate refs/heads/ --format='%(color:bold yellow)%(refname:short)%(color:reset) - %(contents:subject) (%(color:green)%(committerdate:relative)%(color:reset))'
+	fresh = !git fetch --all && git reset --hard origin/$(git branch --show-current)
+	contrib = shortlog -sn --all
+	find = log --all --full-history --oneline -- Author=
+	changes = !git diff --stat HEAD~10..HEAD
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-labs filter-process
+	required = true
+
+[include]
+	path = ~/.gitconfig.local

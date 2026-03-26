@@ -1,0 +1,21 @@
+id = "warp-dark"
+name = "Warp Dark"
+version = "1.0.0"
+schema_version = 1
+description = "Warp Dark Theme by Rich Roll - A stunning dark theme inspired by Warp.dev with deep blacks, vibrant cyan accents, and neon greens"
+authors = ["Rich Roll"]
+themes = ["themes/warp-dark.json"]
+icon_themes = []
+languages = []
+
+[lib]
+
+[grammars]
+
+[language_servers]
+
+[context_servers]
+
+[slash_commands]
+
+[indexed_docs_providers]

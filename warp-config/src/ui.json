@@ -1,0 +1,107 @@
+{
+  "background": "#0a0a0a",
+  "foreground": "#ffffff",
+  
+  "border": {
+    "default": "#1a1a1a",
+    "variant": "#1a1a1a",
+    "focused": "#00c2ff55",
+    "selected": "#00c2ff44",
+    "transparent": "#1a1a1a00",
+    "disabled": "#1a1a1a50"
+  },
+
+  "surface": {
+    "background": "#0a0a0a",
+    "elevated": "#111111"
+  },
+
+  "element": {
+    "background": "#111111",
+    "hover": "#161616",
+    "active": "#00c2ff22",
+    "selected": "#00c2ff1a",
+    "disabled": "#0a0a0a"
+  },
+
+  "ghost_element": {
+    "background": null,
+    "hover": "#161616",
+    "active": "#00c2ff22",
+    "selected": "#00c2ff1a",
+    "disabled": null
+  },
+
+  "text": {
+    "default": "#ffffff",
+    "muted": "#808080",
+    "placeholder": "#4a4a4a",
+    "disabled": "#3a3a3a",
+    "accent": "#00c2ff"
+  },
+
+  "icon": {
+    "default": "#808080",
+    "muted": "#4a4a4a",
+    "disabled": "#3a3a3a",
+    "placeholder": "#4a4a4a",
+    "accent": "#00c2ff"
+  },
+
+  "title_bar": {
+    "background": "#000000",
+    "inactive_background": "#000000"
+  },
+
+  "status_bar": {
+    "background": "#000000"
+  },
+
+  "toolbar": {
+    "background": "#000000"
+  },
+
+  "tab_bar": {
+    "background": "#000000"
+  },
+
+  "tab": {
+    "inactive_background": "#0a0a0a",
+    "active_background": "#1a1a1a"
+  },
+
+  "panel": {
+    "background": "#000000",
+    "focused_border": "#00c2ff55",
+    "indent_guide": "#1a1a1a",
+    "indent_guide_active": "#333333",
+    "indent_guide_hover": "#333333"
+  },
+
+  "pane": {
+    "focused_border": "#00c2ff55"
+  },
+
+  "pane_group": {
+    "border": "#1a1a1a"
+  },
+
+  "search": {
+    "match_background": "#00c2ff44"
+  },
+
+  "drop_target": {
+    "background": "#00c2ff22"
+  },
+
+  "players": [
+    { "cursor": "#00c2ffff", "background": "#00c2ffff", "selection": "#00c2ff2a" },
+    { "cursor": "#b4fa72ff", "background": "#b4fa72ff", "selection": "#b4fa7230" },
+    { "cursor": "#ff8ffdff", "background": "#ff8ffdff", "selection": "#ff8ffd30" },
+    { "cursor": "#fefdc2ff", "background": "#fefdc2ff", "selection": "#fefdc230" },
+    { "cursor": "#ff8272ff", "background": "#ff8272ff", "selection": "#ff827230" },
+    { "cursor": "#a5d5feff", "background": "#a5d5feff", "selection": "#a5d5fe30" },
+    { "cursor": "#d0d1feff", "background": "#d0d1feff", "selection": "#d0d1fe30" },
+    { "cursor": "#ffc4bdff", "background": "#ffc4bdff", "selection": "#ffc4bd30" }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "profiles": {
+    "defaults": {
+      "colorScheme": "Warp Dark",
+      "font": {
+        "face": "JetBrains Mono",
+        "size": 13
+      },
+      "cursor": {
+        "color": "#00c2ff",
+        "shape": "bar",
+        "blink": "motion"
+      },
+      "acrylicOpacity": 0.8,
+      "useAcrylic": true,
+      "scrollbarState": {
+        "scrollback": 10000
+      }
+    },
+    "list": [
+      {
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "name": "Windows PowerShell",
+        "commandline": "powershell.exe",
+        "hidden": false,
+        "icon": "terminal-powershell"
+      },
+      {
+        "guid": "{0caa0dad-35be-5f56-a8ff-afccee571022}",
+        "name": "PowerShell 7",
+        "commandline": "pwsh.exe",
+        "hidden": false,
+        "icon": "terminal-powershell"
+      },
+      {
+        "guid": "{b453ae62-4e3d-5e79-b782-1d01da409809}",
+        "name": "Command Prompt",
+        "commandline": "cmd.exe",
+        "hidden": false,
+        "icon": "terminal-cmd"
+      },
+      {
+        "guid": "{518e2a26-4c46-5e82-a3e1-4d01d24f56b8}",
+        "name": "Ubuntu (WSL)",
+        "source": "Windows.Terminal.Wsl",
+        "hidden": false,
+        "icon": "terminal-ubuntu"
+      }
+    ]
+  },
+  "keybindings": [
+    {
+      "command": "newTab",
+      "keys": ["ctrl+shift+t"]
+    },
+    {
+      "command": "closeTab",
+      "keys": ["ctrl+shift+w"]
+    },
+    {
+      "command": "nextTab",
+      "keys": ["ctrl+tab"]
+    },
+    {
+      "command": "prevTab",
+      "keys": ["ctrl+shift+tab"]
+    },
+    {
+      "command": "copy",
+      "keys": ["ctrl+shift+c"]
+    },
+    {
+      "command": "paste",
+      "keys": ["ctrl+shift+v"]
+    },
+    {
+      "command": "find",
+      "keys": ["ctrl+shift+f"]
+    },
+    {
+      "command": "splitHorizontal",
+      "keys": ["ctrl+shift+h"]
+    },
+    {
+      "command": "splitVertical",
+      "keys": ["ctrl+shift+v"]
+    },
+    {
+      "command": "toggleFocusMode",
+      "keys": ["ctrl+shift+z"]
+    },
+    {
+      "command": "toggleAlwaysOnTop",
+      "keys": ["ctrl+shift+`"]
+    },
+    {
+      "command": "openSettings",
+      "keys": ["ctrl+,"]
+    }
+  ],
+  "theme": "dark",
+  "confirmCloseAllTabs": false,
+  "showTerminalTitleInTitlebar": true,
+  "showTabsInTitlebar": true,
+  "tabSwitcherMode": "disabled",
+  "showExitAlert": true,
+  "disabledBasicAuthIntegration": false,
+  "startOnUserLogin": false,
+  "windowingBehavior": "useAnyExistingWindow"
+}

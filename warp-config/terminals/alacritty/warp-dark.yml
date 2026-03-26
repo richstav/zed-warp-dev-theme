@@ -1,0 +1,99 @@
+colors:
+  primary:
+    background: '#000000'
+    foreground: '#ffffff'
+    dim_foreground: '#808080'
+    bright_foreground: '#ffffff'
+
+  cursor:
+    text: '#000000'
+    cursor: '#00c2ff'
+
+  selection:
+    text: '#000000'
+    background: '#00c2ff2a'
+
+  indexed_colors:
+    - { index: 0, color: '#616161' }
+    - { index: 1, color: '#ff8272' }
+    - { index: 2, color: '#b4fa72' }
+    - { index: 3, color: '#fefdc2' }
+    - { index: 4, color: '#a5d5fe' }
+    - { index: 5, color: '#ff8ffd' }
+    - { index: 6, color: '#d0d1fe' }
+    - { index: 7, color: '#f1f1f1' }
+    - { index: 8, color: '#8e8e8e' }
+    - { index: 9, color: '#ffc4bd' }
+    - { index: 10, color: '#d6fcb9' }
+    - { index: 11, color: '#fefdd5' }
+    - { index: 12, color: '#c1e3fe' }
+    - { index: 13, color: '#ffb1fe' }
+    - { index: 14, color: '#e5e6fe' }
+    - { index: 15, color: '#feffff' }
+
+  search:
+    matches:
+      foreground: '#000000'
+      background: '#fefdc2'
+    focused_match:
+      foreground: '#000000'
+      background: '#b4fa72'
+
+  hints:
+    start:
+      foreground: '#000000'
+      background: '#00c2ff'
+    end:
+      foreground: '#00c2ff'
+      background: '#000000'
+
+  footer_widget:
+    background: '#111111'
+    foreground: '#808080'
+
+  selection_history:
+    - { color: '#00c2ff', background: '#00c2ff2a' }
+    - { color: '#b4fa72', background: '#b4fa7230' }
+    - { color: '#ff8ffd', background: '#ff8ffd30' }
+    - { color: '#fefdc2', background: '#fefdc230' }
+    - { color: '#ff8272', background: '#ff827230' }
+    - { color: '#a5d5fe', background: '#a5d5fe30' }
+    - { color: '#d0d1fe', background: '#d0d1fe30' }
+    - { color: '#ffc4bd', background: '#ffc4bd30' }
+
+font:
+  normal:
+    family: 'JetBrains Mono'
+    style: Regular
+  bold:
+    family: 'JetBrains Mono'
+    style: Bold
+  italic:
+    family: 'JetBrains Mono'
+    style: Italic
+  size: 13.0
+
+cursor:
+  style:
+    shape: Block
+    blinking: On
+  unfocused_hollow: true
+  thickness: 0.15
+
+mouse:
+  hide_when_typing: true
+
+bell:
+  duration: 0
+  color: '#000000'
+
+selection:
+  save_to_clipboard: true
+
+opacity: 1.0
+
+padding:
+  x: 8
+  y: 8
+
+live_config_reload: true

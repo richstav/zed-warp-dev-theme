@@ -1,0 +1,10 @@
+{
+  "name": "Warp Dark",
+  "author": "Rich Roll",
+  "version": "1.0.0",
+  "description": "A dark theme inspired by Warp.dev terminal - deep blacks, cyan accents, and neon greens",
+  "license": "MIT",
+  "homepage": "https://github.com/richstav/warp-config",
+  "repository": "https://github.com/richstav/warp-config",
+  "tags": ["theme", "dark-theme", "warp", "terminal", "zed"]
+}

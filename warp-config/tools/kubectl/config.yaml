@@ -1,0 +1,125 @@
+# Warp Dark Theme - Kubernetes/Kubectl Configuration
+
+# kubectl config
+# Place in ~/.kube/config or merge with existing config
+
+apiVersion: v1
+kind: Config
+
+preferences:
+  colors: true
+
+clusters:
+- name: minikube
+  cluster:
+    server: https://192.168.49.2:8443
+    certificate-authority: ~/.kube/minikube-ca.crt
+    extensions:
+    - name: ctxPlugin
+      extension:
+        priority: 1
+
+- name: docker-desktop
+  cluster:
+    server: https://kubernetes.docker.internal:6443
+    insecure-skip-tls-verify: true
+    extensions:
+    - name: ctxPlugin
+      extension:
+        priority: 1
+
+- name: aws-prod
+  cluster:
+    server: https://eks-prod.us-east-1.amazonaws.com
+    certificate-authority-data: <base64-encoded-ca>
+    extensions:
+    - name: ctxPlugin
+      extension:
+        priority: 1
+
+contexts:
+- name: minikube
+  context:
+    cluster: minikube
+    user: minikube-user
+    namespace: default
+    extensions:
+    - name: ctxPlugin
+      extension:
+        version: 1.1
+        priority: 1
+
+- name: docker-desktop
+  context:
+    cluster: docker-desktop
+    user: docker-desktop-user
+    namespace: default
+    extensions:
+    - name: ctxPlugin
+      extension:
+        version: 1.1
+        priority: 1
+
+- name: aws-prod
+  context:
+    cluster: aws-prod
+    user: aws-prod-user
+    namespace: production
+    extensions:
+    - name: ctxPlugin
+      extension:
+        version: 1.1
+        priority: 1
+
+users:
+- name: minikube-user
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      command: minikube
+      args:
+      - kubectl
+      - config
+      - view
+      - raw
+
+- name: docker-desktop-user
+  user:
+    token: <your-token-here>
+
+- name: aws-prod-user
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1
+      command: aws
+      args:
+      - eks
+      - get-token
+      - --cluster-name
+      - eks-prod
+      env:
+      - name: AWS_PROFILE
+        value: prod
+
+current-context: docker-desktop
+
+# Kubectl aliases for Warp Dark prompt
+# Add to ~/.bashrc or ~/.zshrc:
+# alias k='kubectl'
+# alias kgp='kubectl get pods'
+# alias kgs='kubectl get services'
+# alias kgd='kubectl get deployments'
+# alias kga='kubectl get all'
+# alias kdp='kubectl describe pod'
+# alias kds='kubectl describe service'
+# alias kdd='kubectl describe deployment'
+# alias klf='kubectl logs -f'
+# alias kex='kubectl exec -it'
+# alias kpf='kubectl port-forward'
+# alias kgaa='kubectl get all --all-namespaces'
+# alias wk='watch kubectl'
+# alias kctx='kubectl config use-context'
+# alias kns='kubectl config set-context --current --namespace'
+
+# Kubectl context colors
+# Warp Dark theme recommends setting KUBECTX_COLORS=06,05,04,03,02,01

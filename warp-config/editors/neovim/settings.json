@@ -1,0 +1,54 @@
+{
+  "colorscheme": "warp-dark",
+  "theme": {
+    "name": "warp-dark",
+    "module": "warp-dark"
+  },
+  "editor": {
+    "fontFamily": "'JetBrains Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace",
+    "fontSize": 14,
+    "fontLigatures": true,
+    "lineHeight": 1.6,
+    "letterSpacing": 0.5,
+    "tabSize": 2,
+    "insertSpaces": true,
+    "trimTrailingWhitespace": true,
+    "formatOnSave": false,
+    "showInvisibles": false,
+    "rulers": [80, 120],
+    "wordWrap": "off",
+    "scrolloff": 8,
+    "sidescrolloff": 8,
+    "cursorStyle": "line",
+    "cursorBlink": "phase",
+    "smoothScrolling": true
+  },
+  "ui": {
+    "theme": "dark",
+    "animations": true,
+    "screenIndicator": true,
+    "cursorDuration": 3,
+    "showMatchNumbers": true,
+    "showLineNumbers": true,
+    "relativeLineNumbers": false,
+    "lineNumbersMinChars": 4
+  },
+  "window": {
+    "fullScreen": false,
+    "maximized": true,
+    "decorations": "auto",
+    "transparent": false,
+    "blur": false
+  },
+  "terminal": {
+    "fontFamily": "'JetBrains Mono', 'Fira Code', Consolas, monospace",
+    "fontSize": 13,
+    "cursorBlink": true,
+    "cursorStyle": "line",
+    "scrollback": 10000
+  },
+  "git": {
+    "inlineBlame": false,
+    "diffSplit": "auto"
+  }
+}
